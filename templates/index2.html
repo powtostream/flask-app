@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+ 
+{% block content %}
+{{ super() }}
+Содержимое главной страницы
+{% for m in menu %}
+<li class="userlist">
+    <p>username: {{m.username}}, city: {{m.pr.city}}</p>
+</li>
+{% endfor %}
+{% endblock %}
